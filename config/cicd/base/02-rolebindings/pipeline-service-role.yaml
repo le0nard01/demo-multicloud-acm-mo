@@ -33,8 +33,12 @@ rules:
   - patch
 - apiGroups:
   - apps
+  - apps.openshift.io
+  - route.openshift.io
   resources:
   - deployments
+  - deploymentconfigs
+  - routes
   verbs:
   - get
   - create
