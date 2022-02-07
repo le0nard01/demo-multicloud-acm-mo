@@ -106,7 +106,7 @@ spec:
       kind: Task
       name: update-manifest
     workspaces:
-    - name: output
+    - name: source
       workspace: shared-data
   workspaces:
   - description: This workspace will receive the cloned git repo.

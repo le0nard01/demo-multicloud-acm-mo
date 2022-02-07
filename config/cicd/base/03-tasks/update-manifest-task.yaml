@@ -6,7 +6,7 @@ spec:
   description: >-
     This task updates the manifest for the current application to point to the image tag created with the short commit.
   workspaces:
-    - name: shared-data
+    - name: source
   params:
     - name: image
       description: Used to tag the built image.
@@ -26,10 +26,23 @@ spec:
     - name: deployment-file
       description: File in which the image configuration is stored.
       type: string
+    - default: git-host-access-token
+      name: GIT_TOKEN_SECRET_NAME
+      type: string
+    - default: token
+      name: GIT_TOKEN_SECRET_KEY
+      type: string
   steps:
     - name: git
       image: alpine/git:latest
-      workingDir: $(workspaces.shared-data.path)
+      workingDir: $(workspaces.source.path)
+      env:
+        - name: GITHOSTACCESSTOKEN
+          valueFrom:
+            secretKeyRef:
+              key: $(params.GIT_TOKEN_SECRET_KEY)
+              name: $(params.GIT_TOKEN_SECRET_NAME)
+ 
       script: |
         # Setting up the git config.
         git config --global user.email "$(params.git_user_email)"
