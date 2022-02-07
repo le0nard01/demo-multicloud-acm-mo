@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
+    app.openshift.io/runtime: quarkus
     app.kubernetes.io/name: inventory
     app.kubernetes.io/part-of: app-inventory
   name: inventory

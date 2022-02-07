@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
+    app.openshift.io/runtime: nodejs
     app.kubernetes.io/name: gateway
     app.kubernetes.io/part-of: app-gateway
   name: gateway

@@ -5,6 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/name: catalog
     app.kubernetes.io/part-of: app-catalog
+    app.openshift.io/runtime: spring
   name: catalog
   namespace: dev
 spec:

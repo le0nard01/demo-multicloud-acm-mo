@@ -5,6 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/name: inventory
     app.kubernetes.io/part-of: app-inventory
+    app.openshift.io/runtime: quarkus
   name: inventory
   namespace: dev
 spec:
