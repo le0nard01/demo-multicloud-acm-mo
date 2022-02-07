@@ -36,6 +36,6 @@ spec:
           - name: POSTGRESQL_PASSWORD
             value: sa
           - name: POSTGRESQL_DATABASE
-            value: scores
+            value: inventory
       serviceAccountName: default
 status: {}

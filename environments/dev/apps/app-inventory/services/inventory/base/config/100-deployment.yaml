@@ -28,5 +28,13 @@ spec:
         ports:
         - containerPort: 8080
         resources: {}
+        env:
+          - name: QUARKUS_DATASOURCE_USERNAME
+            value: sa
+          - name: QUARKUS_DATASOURCE_PASSWORD
+            value: sa
+          - name: QUARKUS_DATASOURCE_JDBC_URL
+            value: jdbc:postgresql://postgresql:5432/inventory
+
       serviceAccountName: default
 status: {}
