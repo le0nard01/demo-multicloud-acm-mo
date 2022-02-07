@@ -21,6 +21,7 @@ spec:
       labels:
         app.kubernetes.io/name: postgresql
         app.kubernetes.io/part-of: app-inventory
+        name: postgresql
     spec:
       containers:
       - image: image-registry.openshift-image-registry.svc:5000/openshift/postgresql:10-el8

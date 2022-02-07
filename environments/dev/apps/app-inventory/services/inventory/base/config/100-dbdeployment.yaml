@@ -19,6 +19,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
+        name: postgresql
         app.kubernetes.io/name: postgresql
         app.kubernetes.io/part-of: app-inventory
     spec:
