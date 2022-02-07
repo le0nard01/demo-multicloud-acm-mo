@@ -6,7 +6,7 @@ spec:
   description: >-
     This task updates the manifest for the current application to point to the image tag created with the short commit.
   workspaces:
-    - name: source
+    - name: shared-data
   params:
     - name: image
       description: Used to tag the built image.
@@ -29,7 +29,7 @@ spec:
   steps:
     - name: git
       image: alpine/git:latest
-      workingDir: $(workspaces.source.path)
+      workingDir: $(workspaces.shared-data.path)
       script: |
         # Setting up the git config.
         git config --global user.email "$(params.git_user_email)"
