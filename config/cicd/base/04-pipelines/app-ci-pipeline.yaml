@@ -34,6 +34,8 @@ spec:
     type: string
   - name: MANIFEST_FILE
     type: string
+  - name: MANIFEST_REPO
+    type: string
   - name: GIT_REF
     type: string
   - name: COMMIT_DATE
