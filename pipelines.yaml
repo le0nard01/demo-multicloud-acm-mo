@@ -1,0 +1,29 @@
+config:
+  argocd:
+    namespace: openshift-gitops
+  pipelines:
+    name: cicd
+environments:
+- apps:
+  - name: app-inventory
+    services:
+    - name: inventory
+      pipelines:
+        integration:
+          bindings:
+          - dev-app-inventory-inventory-binding
+          - github-push-binding
+      source_url: https://github.com/globex-retail/inventory.git
+      webhook:
+        secret:
+          name: webhook-secret-dev-inventory
+          namespace: cicd
+  name: dev
+  pipelines:
+    integration:
+      bindings:
+      - github-push-binding
+      template: app-ci-template
+- name: stage
+gitops_url: https://github.com/globex-retail/gitops.git
+version: 1
