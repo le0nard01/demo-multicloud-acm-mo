@@ -5,7 +5,7 @@ metadata:
     app.kubernetes.io/name: inventory-database
     app.kubernetes.io/part-of: app-inventory
   name: inventory-database
-  namespace: dev
+  namespace: prod
 spec:
   ports:
     - name: postgresql

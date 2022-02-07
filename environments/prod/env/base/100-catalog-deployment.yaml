@@ -29,5 +29,16 @@ spec:
         ports:
         - containerPort: 8080
         resources: {}
+        env:
+          - name: JAVA_OPTS_APPEND
+            value: -Dspring.profiles.active=openshift
+          - name: SPRING_DATASOURCE_URL
+            value: jdbc:postgresql://catalog-database:5432/catalog
+          - name: SPRING_DATASOURCE_USERNAME
+            value: sa
+          - name: SPRING_DATASOURCE_PASSWORD
+            value: sa
+          - name: INVENTORY_URL
+            value: inventory
       serviceAccountName: default
 status: {}

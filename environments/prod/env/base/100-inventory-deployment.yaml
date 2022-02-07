@@ -35,6 +35,6 @@ spec:
           - name: QUARKUS_DATASOURCE_PASSWORD
             value: sa
           - name: QUARKUS_DATASOURCE_JDBC_URL
-            value: jdbc:postgresql://postgresql:5432/inventory
+            value: jdbc:postgresql://inventory-database:5432/inventory
       serviceAccountName: default
 status: {}

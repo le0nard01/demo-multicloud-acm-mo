@@ -3,30 +3,30 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app.kubernetes.io/name: postgresql
+    app.kubernetes.io/name: catalog-database
     app.openshift.io/runtime: postgresql
-    app.kubernetes.io/part-of: app-inventory
-  name: postgresql
+    app.kubernetes.io/part-of: app-catalog
+  name: catalog-database
   namespace: prod
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: postgresql
-      app.kubernetes.io/part-of: app-inventory
+      app.kubernetes.io/name: catalog-database
+      app.kubernetes.io/part-of: app-catalog
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app.kubernetes.io/name: postgresql
-        app.kubernetes.io/part-of: app-inventory
-        name: postgresql
+        app.kubernetes.io/name: catalog-database
+        app.kubernetes.io/part-of: app-catalog
+        name: catalog-database
     spec:
       containers:
       - image: image-registry.openshift-image-registry.svc:5000/openshift/postgresql:10-el8
         imagePullPolicy: IfNotPresent
-        name: postgresql
+        name: catalog-database
         ports:
           - containerPort: 5432
             protocol: TCP
@@ -37,6 +37,6 @@ spec:
           - name: POSTGRESQL_PASSWORD
             value: sa
           - name: POSTGRESQL_DATABASE
-            value: inventory
+            value: catalog
       serviceAccountName: default
 status: {}

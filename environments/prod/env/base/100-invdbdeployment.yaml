@@ -6,8 +6,8 @@ metadata:
     app.kubernetes.io/name: inventory-database
     app.openshift.io/runtime: postgresql
     app.kubernetes.io/part-of: app-inventory
-  name: inventory-database
-  namespace: dev
+  name: postgresql
+  namespace: prod
 spec:
   replicas: 1
   selector:
@@ -19,14 +19,14 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        name: inventory-database
         app.kubernetes.io/name: inventory-database
         app.kubernetes.io/part-of: app-inventory
+        name: inventory-database
     spec:
       containers:
       - image: image-registry.openshift-image-registry.svc:5000/openshift/postgresql:10-el8
         imagePullPolicy: IfNotPresent
-        name: inventory-database
+        name: postgresql
         ports:
           - containerPort: 5432
             protocol: TCP
