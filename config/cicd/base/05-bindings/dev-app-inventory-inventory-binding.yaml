@@ -8,6 +8,8 @@ spec:
   params:
   - name: imageRepo
     value: quay.io/globex/inventory
+  - name: manifestFile
+    value: environments/dev/apps/app-inventory/services/inventory/base/config/100-deployment.yaml
   - name: tlsVerify
     value: "true"
 status: {}
