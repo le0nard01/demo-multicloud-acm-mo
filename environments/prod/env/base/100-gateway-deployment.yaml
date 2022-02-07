@@ -29,5 +29,8 @@ spec:
         ports:
         - containerPort: 8080
         resources: {}
+        env:
+          - name: COOLSTORE_GW_ENDPOINT
+            value: catalog
       serviceAccountName: default
 status: {}
