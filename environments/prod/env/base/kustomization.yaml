@@ -4,6 +4,8 @@ resources:
 - 100-catalog-deployment.yaml
 - 100-gateway-deployment.yaml
 - 200-inventory-service.yaml
+- 100-dbdeployment.yaml
+- 200-dbservice.yaml
 - 200-catalog-service.yaml
 - 200-gateway-service.yaml
 - 300-route.yaml
