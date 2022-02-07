@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/name: inventory
     app.kubernetes.io/part-of: app-inventory
   name: inventory
-  namespace: dev
+  namespace: prod
 spec:
   replicas: 1
   selector:

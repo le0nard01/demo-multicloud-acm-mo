@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/name: catalog
     app.kubernetes.io/part-of: app-catalog
   name: catalog
-  namespace: dev
+  namespace: prod
 spec:
   replicas: 1
   selector:
