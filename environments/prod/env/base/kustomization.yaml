@@ -1,0 +1,9 @@
+resources:
+- prod-environment.yaml
+- 100-inventory-deployment.yaml
+- 100-catalog-deployment.yaml
+- 100-gateway-deployment.yaml
+- 200-inventory-service.yaml
+- 200-catalog-service.yaml
+- 200-gateway-service.yaml
+- 300-route.yaml
