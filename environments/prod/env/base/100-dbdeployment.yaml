@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/name: postgresql
+    app.openshift.io/runtime: postgresql
+    app.kubernetes.io/part-of: app-inventory
+  name: postgresql
+  namespace: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: postgresql
+      app.kubernetes.io/part-of: app-inventory
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/name: postgresql
+        app.kubernetes.io/part-of: app-inventory
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/openshift/postgresql:10-el8
+        imagePullPolicy: IfNotPresent
+        name: postgresql
+        ports:
+          - containerPort: 5432
+            protocol: TCP
+        resources: {}
+        env:
+          - name: POSTGRESQL_USER
+            value: sa
+          - name: POSTGRESQL_PASSWORD
+            value: sa
+          - name: POSTGRESQL_DATABASE
+            value: scores
+      serviceAccountName: default
+status: {}

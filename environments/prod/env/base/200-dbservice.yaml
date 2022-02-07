@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/name: postgresql
+    app.kubernetes.io/part-of: app-inventory
+  name: postgresql
+  namespace: prod
+spec:
+  ports:
+    - name: postgresql
+      protocol: TCP
+      port: 5432
+      targetPort: 5432
+  selector:
+    name: postgresql
+status:
+  loadBalancer: {}
