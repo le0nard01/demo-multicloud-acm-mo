@@ -8,6 +8,8 @@ spec:
   params:
   - name: imageRepo
     value: quay.io/globex/gateway
+  - name: manifestRepo
+    value: https://github.com/globex-retail/gitops.git
   - name: manifestFile
     value: environments/dev/apps/gateway/services/gateway/base/config/100-deployment.yaml
   - name: tlsVerify

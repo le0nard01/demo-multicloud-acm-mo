@@ -23,8 +23,11 @@ spec:
       type: string
       description: Git user email for performing the push operation.
       default: "tekton@tekton.com"
-    - name: deployment-file
+    - name: deployment_file
       description: File in which the image configuration is stored.
+      type: string
+    - name: deployment_repo
+      description: Repo in which the image configuration is stored.
       type: string
     - default: git-host-access-token
       name: GIT_TOKEN_SECRET_NAME
@@ -44,20 +47,25 @@ spec:
               name: $(params.GIT_TOKEN_SECRET_NAME)
  
       script: |
+        #!/usr/bin/env bash
         # Setting up the git config.
         git config --global user.email "$(params.git_user_email)"
         git config --global user.name "$(params.git_user_name)"
 
         # Checkout target branch to avoid the detached HEAD state
+        TMPDIR=$(mktemp -d)
 
+        cd $TMPDIR
+        git clone $(params.deployment_repo)
+        cd gitops
         git checkout $(params.target-branch)
 
         # Set to the short commit value passed as parameter.
         # Notice the enclosing " to keep it as a string in the resulting YAML.
         IMAGE=\"$(params.image)\"
 
-        sed -i "#^\(-[[:space:]]*image: \).*#\1${IMAGE}#" $(params.deployment-file)
+        sed -i "#^\(-[[:space:]]*image: \).*#\1${IMAGE}#" $(params.deployment_file)
 
-        git add --a
+        git add $(params.deployment_file)
         git commit -m "Automatically updated manifest to point to image tag $IMAGE"
         git push origin $(params.target-branch)

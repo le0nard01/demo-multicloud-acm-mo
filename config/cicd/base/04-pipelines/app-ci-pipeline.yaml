@@ -96,8 +96,10 @@ spec:
     params:
     - name: image
       value: $(params.IMAGE)
-    - name: deployment-file
+    - name: deployment_file
       value: $(params.MANIFEST_FILE)
+    - name: deployment_repo
+      value: $(params.MANIFEST_REPO)
     - name: git_user_name
       value: $(params.COMMIT_AUTHOR)
     runAfter:
