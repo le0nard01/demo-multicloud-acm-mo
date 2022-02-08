@@ -27,7 +27,7 @@ spec:
         app.kubernetes.io/part-of: app-gateway
     spec:
       containers:
-      - image:   "quay.io/globex/gateway:main-a80ab296f3b7b16632ed7ebe554ffe7b7f55a678"
+      - image:    "quay.io/globex/gateway:main-f44e95203f2c3419811903c59ccaa719a9c811c9"
         imagePullPolicy: Always
         name: gateway
         ports:
