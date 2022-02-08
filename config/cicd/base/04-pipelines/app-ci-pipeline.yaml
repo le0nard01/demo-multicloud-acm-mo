@@ -174,9 +174,6 @@ spec:
     taskRef:
       kind: Task
       name: github-open-pr
-    workspaces:
-    - name: source
-      workspace: shared-data
 
   workspaces:
   - description: This workspace will receive the cloned git repo.
