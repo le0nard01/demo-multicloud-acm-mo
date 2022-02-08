@@ -47,7 +47,6 @@ spec:
               name: $(params.GIT_TOKEN_SECRET_NAME)
  
       script: |
-        #!/usr/bin/env bash
         # Setting up the git config.
         git config --global user.email "$(params.git_user_email)"
         git config --global user.name "$(params.git_user_name)"
