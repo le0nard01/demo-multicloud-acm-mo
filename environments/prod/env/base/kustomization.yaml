@@ -11,3 +11,4 @@ resources:
 - 200-catalog-service.yaml
 - 200-gateway-service.yaml
 - 300-route.yaml
+- 300-catroute.yaml
