@@ -94,6 +94,21 @@ spec:
     workspaces:
     - name: source
       workspace: shared-data
+
+  - name: image-scan
+    taskRef:
+      name: stackrox-image-check
+      kind: Task
+    params:
+      - name: image
+        value:  $(params.IMAGE)
+      - name: rox_api_token
+        value: roxsecrets
+      - name: rox_central_endpoint
+        value: roxsecrets
+    runAfter:
+    - build-image
+
   - name: update-dev-manifest
     params:
     - name: image
@@ -105,7 +120,7 @@ spec:
     - name: git_user_name
       value: $(params.COMMIT_AUTHOR)
     runAfter:
-    - build-image
+    - image-scan
     taskRef:
       kind: Task
       name: update-manifest
