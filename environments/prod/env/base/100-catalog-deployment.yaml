@@ -39,6 +39,6 @@ spec:
           - name: SPRING_DATASOURCE_PASSWORD
             value: sa
           - name: INVENTORY_URL
-            value: inventory
+            value: inventory:8080
       serviceAccountName: default
 status: {}
