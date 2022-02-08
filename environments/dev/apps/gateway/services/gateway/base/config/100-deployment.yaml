@@ -4,7 +4,8 @@ metadata:
   creationTimestamp: null
   annotations:
     app.openshift.io/vcs-uri: https://github.com/globex-retail/gateway.git?ref=HEAD
-    app.openshift.io/connects-to: catalog
+    app.openshift.io/connects-to: |
+      [{"apiVersion":"apps/v1","kind":"Deployment","name":"catalog"}]
   labels:
     app.kubernetes.io/name: gateway
     app.kubernetes.io/part-of: app-gateway
