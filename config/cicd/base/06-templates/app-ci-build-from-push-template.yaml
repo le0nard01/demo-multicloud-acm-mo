@@ -24,6 +24,8 @@ spec:
     name: imageRepo
   - description: The file to update to point to newly built image
     name: manifestFile
+  - description: The file to update to point to newly built image in prod
+    name: manifestFileProd
   - description: The repo to update to point to newly built image
     name: manifestRepo
   - description: Enable image repository TLS certification verification.
