@@ -2,6 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
+  annotations:
+    app.openshift.io/vcs-uri: https://github.com/globex-retail/catalog.git?ref=HEAD
+    app.openshift.io/connects-to: inventory
   labels:
     app.kubernetes.io/name: catalog
     app.kubernetes.io/part-of: app-catalog

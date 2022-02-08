@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   creationTimestamp: null
+  annotations:
+    app.openshift.io/connects-to: catalog
   labels:
     app.openshift.io/runtime: nodejs
     app.kubernetes.io/name: gateway
