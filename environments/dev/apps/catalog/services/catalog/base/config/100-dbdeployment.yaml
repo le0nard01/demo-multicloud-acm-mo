@@ -19,7 +19,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        name: postgresql
+        name: catalog-database
         app.kubernetes.io/name: catalog-database
         app.kubernetes.io/part-of: app-catalog
     spec:
