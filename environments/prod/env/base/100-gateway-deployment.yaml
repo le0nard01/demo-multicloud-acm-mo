@@ -34,6 +34,6 @@ spec:
         resources: {}
         env:
           - name: COOLSTORE_GW_ENDPOINT
-            value: catalog-prod.apps.cluster-j8xx4.j8xx4.sandbox1757.opentlc.com
+            value: catalog-prod
       serviceAccountName: default
 status: {}
