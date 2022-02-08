@@ -106,6 +106,8 @@ spec:
         value: roxsecrets
       - name: rox_central_endpoint
         value: roxsecrets
+      - name: insecure-skip-tls-verify
+        value: "true"
     runAfter:
     - build-image
 
