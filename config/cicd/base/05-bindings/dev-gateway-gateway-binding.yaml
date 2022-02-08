@@ -12,6 +12,8 @@ spec:
     value: https://github.com/globex-retail/gitops.git
   - name: manifestFile
     value: environments/dev/apps/gateway/services/gateway/base/config/100-deployment.yaml
+  - name: manifestFileProd
+    value: environments/prod/env/base/100-gateway-deployment.yaml
   - name: tlsVerify
     value: "true"
 status: {}

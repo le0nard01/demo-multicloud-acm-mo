@@ -50,6 +50,8 @@ spec:
         value: $(tt.params.imageRepo):$(tt.params.io.openshift.build.commit.ref)-$(tt.params.io.openshift.build.commit.id)
       - name: MANIFEST_FILE
         value: $(tt.params.manifestFile)
+      - name: MANIFEST_FILE_PROD
+        value: $(tt.params.manifestFileProd)
       - name: MANIFEST_REPO
         value: $(tt.params.manifestRepo)
       - name: COMMIT_SHA
