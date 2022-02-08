@@ -155,8 +155,6 @@ spec:
 
   - name: issue-prod-pr
     params:
-    - name: image
-      value: $(params.IMAGE)
     - name: REPO_FULL_NAME
       value: globex/gitops
     - name: GITHUB_TOKEN_SECRET_NAME
