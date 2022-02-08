@@ -8,7 +8,7 @@ resources:
 - 03-tasks/update-manifest-task.yaml
 - 03-tasks/stackrox-image-check.yaml
 - 03-tasks/open-pr-task.yaml
-- 03-tasks/pr-manfifest-task.yaml
+- 03-tasks/pr-manifest-task.yaml
 - 04-pipelines/app-ci-pipeline.yaml
 - 04-pipelines/ci-dryrun-from-push-pipeline.yaml
 - 05-bindings/dev-app-inventory-inventory-binding.yaml
