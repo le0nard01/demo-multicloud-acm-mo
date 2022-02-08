@@ -156,7 +156,7 @@ spec:
   - name: issue-prod-pr
     params:
     - name: REPO_FULL_NAME
-      value: globex/gitops
+      value: globex-retail/gitops
     - name: GITHUB_TOKEN_SECRET_NAME
       value: git-host-access-token
     - name: GITHUB_TOKEN_SECRET_KEY
