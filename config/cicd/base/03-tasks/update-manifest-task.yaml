@@ -63,7 +63,7 @@ spec:
         # Notice the enclosing " to keep it as a string in the resulting YAML.
         IMAGE=\"$(params.image)\"
 
-        sed  "s#\(.*image:\s*\).*#\1 ${IMAGE}#" $(params.deployment_file)
+        sed -i "s#\(.*image:\s*\).*#\1 ${IMAGE}#" $(params.deployment_file)
 
         git add $(params.deployment_file)
         git commit -m "Automatically updated manifest to point to image tag $IMAGE"
