@@ -26,7 +26,7 @@ spec:
         app.kubernetes.io/part-of: app-catalog
     spec:
       containers:
-      - image: quay.io/globex/catalog:main-387b0f7133a1688da393d7c663e4561d5461dbb9
+      - image:  "quay.io/globex/catalog:main-0d8454fc65faf75b32f5686b6cb279b497c08fda"
         imagePullPolicy: Always
         name: catalog
         ports:
