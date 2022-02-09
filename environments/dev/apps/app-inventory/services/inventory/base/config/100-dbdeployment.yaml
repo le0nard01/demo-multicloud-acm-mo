@@ -24,7 +24,7 @@ spec:
         app.kubernetes.io/part-of: app-inventory
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/openshift/postgresql:10-el8
+      - image: registry.redhat.io/rhel8/postgresql-10@sha256:37636047d8fd31e1b9d941fb303ebf73703a03e918373463a46e4ce2b77c79f3
         imagePullPolicy: IfNotPresent
         name: inventory-database
         ports:
