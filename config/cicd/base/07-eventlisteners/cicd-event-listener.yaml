@@ -104,6 +104,30 @@ spec:
     name: app-ci-build-from-push-catalog
     template:
       ref: app-ci-template
+  - bindings:
+    - ref: dev-inventory-ai-inventory-ai-binding
+    - ref: github-push-binding
+    interceptors:
+    - params:
+      - name: secretRef
+        value:
+          secretKey: webhook-secret-key
+          secretName: webhook-secret-dev-inventory-ai
+      ref:
+        name: github
+    - params:
+      - name: filter
+        value: (header.match('X-GitHub-Event', 'push') && body.repository.full_name
+          == 'rh-aiservices-bu/car-rest')
+      - name: overlays
+        value:
+        - expression: body.ref.split('/')[2]
+          key: ref
+      ref:
+        name: cel
+    name: app-ci-build-from-push-inventory-ai
+    template:
+      ref: app-ai-ci-template
 status:
   configuration:
     generatedName: ""
