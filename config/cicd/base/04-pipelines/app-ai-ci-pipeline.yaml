@@ -17,7 +17,7 @@ spec:
     - name: DESCRIPTION
       value: The build is complete
     - name: STATE
-      value: $(tasks.build-image.status)
+      value: $(tasks.rebuild-model.status)
     taskRef:
       kind: Task
       name: set-commit-status
