@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/part-of: app-inventory
     spec:
       containers:
-      - image:              "quay.io/globex/inventory:main-3348870378a9cd16e80cba49ee3aafb34612130f"
+      - image:               "quay.io/globex/inventory:main-b2f2fd510a64fec4da8020a8d272a899969e40c1"
         imagePullPolicy: Always
         name: inventory
         ports:
