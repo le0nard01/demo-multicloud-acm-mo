@@ -35,7 +35,7 @@ spec:
     repoURL: https://github.com/globex-retail/gitops.git
   syncPolicy:
     automated:
-      prune: true
+      prune: false
       selfHeal: true
 status:
   health: {}
