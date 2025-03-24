@@ -25,7 +25,6 @@ spec:
     spec:
       containers:
       - image: registry.redhat.io/rhel8/postgresql-10@sha256:37636047d8fd31e1b9d941fb303ebf73703a03e918373463a46e4ce2b77c79f3
-        command: [ "sh", "-c", "/deployments/run-java.sh" ]
         imagePullPolicy: IfNotPresent
         name: catalog-database
         ports:

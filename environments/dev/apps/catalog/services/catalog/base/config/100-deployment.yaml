@@ -28,6 +28,7 @@ spec:
     spec:
       containers:
       - image:    "quay.io/globex/catalog:main-0d8454fc65faf75b32f5686b6cb279b497c08fda"
+        command: [ "sh", "-c", "/deployments/run-java.sh" ]        
         imagePullPolicy: Always
         name: catalog
         ports:
