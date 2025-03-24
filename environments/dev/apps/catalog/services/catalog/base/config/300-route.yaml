@@ -11,4 +11,7 @@ spec:
     kind: Service
     name: catalog
     weight: 100
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Allow
   wildcardPolicy: None
