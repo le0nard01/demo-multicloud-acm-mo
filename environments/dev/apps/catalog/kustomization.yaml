@@ -1,4 +1,4 @@
 bases:
 - overlays
 commonLabels:
-  app.openshift.io/vcs-source: globex-retail/gitops
+  common: aplicacao-core
