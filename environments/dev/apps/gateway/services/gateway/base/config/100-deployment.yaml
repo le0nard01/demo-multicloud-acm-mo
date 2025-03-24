@@ -36,5 +36,7 @@ spec:
         env:
           - name: COOLSTORE_GW_ENDPOINT
             value: catalog-dev
+          - name: OCP_NAMESPACE
+            value: dev
       serviceAccountName: default
 status: {}

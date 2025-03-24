@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   creationTimestamp: null
-  name: cart-undefined
+  name: cart
   namespace: dev
 spec:
   port:
