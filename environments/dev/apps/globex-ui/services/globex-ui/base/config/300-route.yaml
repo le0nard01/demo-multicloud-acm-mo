@@ -5,9 +5,10 @@ metadata:
     openshift.io/host.generated: "true"
   labels:
     app.kubernetes.io/instance: globex-app
-    app.kubernetes.io/name: catalog
+    app.kubernetes.io/name: globex-ui
     app.kubernetes.io/part-of: globex-app
-  name: catalog
+    app.kubernetes.io/version: 1.0.0
+  name: globex-ui
 spec:
   port:
     targetPort: http
@@ -16,6 +17,6 @@ spec:
     termination: edge
   to:
     kind: Service
-    name: catalog
+    name: globex-ui
     weight: 100
   wildcardPolicy: None
