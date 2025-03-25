@@ -1,4 +1,2 @@
-namespace: ${ARGOCD_APP_NAMESPACE}
-
 bases:
 - ../base

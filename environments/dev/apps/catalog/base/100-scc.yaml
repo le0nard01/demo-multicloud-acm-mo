@@ -6,6 +6,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: default
+    subjects: ${ARGOCD_APP_NAMESPACE}
 roleRef:
   kind: ClusterRole
   name: system:openshift:scc:anyuid
