@@ -1,2 +1,6 @@
-bases:
-- ../services/inventory
+resources:
+- 100-pvc.yaml
+- 100-deployment.yaml
+- 100-dbdeployment.yaml
+- 200-service.yaml
+- 200-dbservice.yaml

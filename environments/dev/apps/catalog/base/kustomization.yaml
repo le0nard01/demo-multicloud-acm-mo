@@ -1,2 +1,8 @@
-bases:
-- ../services/catalog
+resources:
+- 100-pvc.yaml
+- 100-scc.yaml
+- 100-deployment.yaml
+- 200-service.yaml
+- 100-dbdeployment.yaml
+- 200-dbservice.yaml
+- 300-route.yaml
