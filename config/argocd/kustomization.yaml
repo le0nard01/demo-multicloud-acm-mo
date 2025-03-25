@@ -1,9 +1,0 @@
-resources:
-- argo-app.yaml
-- cicd-app.yaml
-- dev-app-inventory-app.yaml
-- dev-catalog-app.yaml
-- dev-env-app.yaml
-- dev-gateway-app.yaml
-- prod-env-app.yaml
-- stage-env-app.yaml
