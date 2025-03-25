@@ -1,5 +1,6 @@
 resources:
 - 100-pvc.yaml
+- 100-secret.yaml
 - 100-scc.yaml
 - 100-deployment.yaml
 - 200-service.yaml
