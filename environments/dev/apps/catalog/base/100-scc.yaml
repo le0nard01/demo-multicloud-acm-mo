@@ -6,7 +6,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: default
-    namespace: dev
+    #namespace: dev
 roleRef:
   kind: ClusterRole
   name: system:openshift:scc:anyuid
