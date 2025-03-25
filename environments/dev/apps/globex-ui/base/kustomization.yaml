@@ -1,2 +1,2 @@
 bases:
-- ../services/gateway
+- ../services/globex-ui
