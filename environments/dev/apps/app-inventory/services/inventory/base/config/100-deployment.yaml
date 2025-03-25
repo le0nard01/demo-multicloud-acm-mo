@@ -61,6 +61,4 @@ spec:
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
-      serviceAccount: inventory-app
-      serviceAccountName: inventory-app
       terminationGracePeriodSeconds: 30

@@ -58,6 +58,4 @@ spec:
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
-      serviceAccount: globex-app-globex-ui
-      serviceAccountName: globex-app-globex-ui
       terminationGracePeriodSeconds: 30
