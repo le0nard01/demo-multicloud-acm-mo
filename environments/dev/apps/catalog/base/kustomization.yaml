@@ -6,4 +6,8 @@ resources:
 - 200-service.yaml
 - 100-dbdeployment.yaml
 - 200-dbservice.yaml
+<<<<<<< HEAD
 - 300-route.yaml
+=======
+- 300-route.yaml
+>>>>>>> fb406c1 (No submariner)

@@ -39,9 +39,9 @@ spec:
         - name: API_TRACK_USERACTIVITY
           value: http://activity-tracking:8080/track
         - name: API_GET_PAGINATED_PRODUCTS
-          value: http://catalog.aplicacao-dev.svc.clusterset.local:8080/services/products
+          value: http://catalog:8080/services/products
         - name: API_GET_PRODUCT_DETAILS_BY_IDS
-          value: http://catalog.aplicacao-dev.svc.clusterset.local:8080/services/product/list/
+          value: http://catalog:8080/services/product/list/
         - name: API_CATALOG_RECOMMENDED_PRODUCT_IDS
           value: http://recommendation-engine:8080/score/product
         - name: API_TRACK_PLACEORDER
